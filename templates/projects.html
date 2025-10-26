@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="projekty-galeria">
+    <h2>Nasze Projekty</h2>
+    <div class="gallery">
+
+        <div class="project-item">
+            <h3>Balustrady</h3>
+            <img src="{{ url_for('static', filename='images/balustrada2.jpg') }}" alt="Balustrada tarasowa">
+            <p>Projektowanie i montaż balustrad. Bezpieczeństwo z unikalnym designem.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Konstrukcje drewniane</h3>
+            <img src="{{ url_for('static', filename='images/chustawka.jpg') }}" alt="Nowoczesna Huśtawka">
+            <p>Unikalne konstrukcje drewniane. Altany, huśtawki, trwałość i urok.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Ogrodzenia</h3>
+            <img src="{{ url_for('static', filename='images/ogrodzenie.jpg') }}" alt="Solidne ogrodzenia">
+            <p>Trwałe i estetyczne ogrodzenia. Prywatność i bezpieczeństwo posesji.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Budowa Domu</h3>
+            <img src="{{ url_for('static', filename='images/budowa_domu.jpg') }}" alt="Kompleksowa budowa domów">
+            <p>Kompleksowa budowa domu. Od projektu po klucz.</p>
+        </div>
+
+    </div>
+
+    <div class="full-gallery-link">
+        <a href="{{ url_for('gallery') }}" class="button">Pełna Galeria Naszych Projektów</a>
+    </div>
+</section>
+{% endblock %}

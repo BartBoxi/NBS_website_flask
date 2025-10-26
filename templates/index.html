@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+    <h1>Nowoczesne budownictwo i wykończenia z pasją</h1>
+</section>
+
+<section id="o-nas" style="display: flex; align-items: flex-start; gap: 5px; max-width: 1200px; margin: 0 auto; padding: 20px;">
+    <div style="flex: 1; min-width: 300px; overflow-y: auto; max-height: 600px; padding-right: 15px;">
+        <h2>O nas</h2>
+        <p><b>NBS New Build Story</b> to firma z doświadczeniem w branży remontowo-budowlanej...</p>
+        <p>Specjalizujemy się w kompleksowej obsłudze inwestycji...</p>
+        <p><b>Każdy projekt traktujemy indywidualnie...</b></p>
+    </div>
+
+    <div style="flex: 1; display: flex; justify-content: center; align-items: center; max-height: 600px;">
+        <img src="{{ url_for('static', filename='images/house_2.jpg') }}"
+             alt="NBS New Build Story"
+             style="width:100%; height:100%; object-fit: cover; border-radius: 20px;">
+    </div>
+</section>
+
+
+<section id="oferta">
+    <h2>Oferta</h2>
+
+<section id="our-services" style="display:flex; align-items:flex-start; gap:30px; max-width:1200px; margin:0 auto; padding:20px;">
+    <div style="flex:1; min-width:250px; max-width:40%; display:flex; justify-content:center; align-items:center;">
+        <img src="{{ url_for('static', filename='images/chustawka.jpg') }}"
+             alt="NBS New Build Story"
+             style="width:100%; height:auto; object-fit:cover; border-radius:20px;">
+    </div>
+
+    <div>
+        <p><b>Nasze usługi obejmują:</b></p>
+        <ul>
+            <li>budowa domów</li>
+            <li>kompleksowe remonty domów i mieszkań</li>
+            <li>wykończenia wnętrz</li>
+            <li>elewacje</li>
+            <li>ogrodzenia</li>
+            <li>wiaty</li>
+            <li>garaże</li>
+        </ul>
+        <p>Wszystkie usługi oferujemy na terenie Małopolski i okolic.</p>
+    </div>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+        <p>
+            <img src="{{ url_for('static', filename='images/image_icon.jpg') }}" 
+                 alt="Email Icon" style="width:20px; height:20px; margin-right:5px;">
+            <a href="mailto:nbsnewbuildstory@gmail.com">nbsnewbuildstory@gmail.com</a>
+        </p>
+        <p>
+            <img src="{{ url_for('static', filename='images/phone_icon.jpg') }}" 
+                 alt="Phone Icon" style="width:20px; height:20px; margin-right:5px;">
+            <strong>510 731 565</strong>
+        </p>
+    </div>
+</section>
+
+{% endblock %}

@@ -8,19 +8,51 @@
 <body>
 
 <nav>
-    <a href="#o-nas" class="button">O nas</a>
-    <a href="#oferta" class="button">Oferta</a>
-    <a href="#kontakt" class="button">Skontaktuj się z nami</a>
-    <a href="#nasze-projekty" class="button">Nasze Projekty</a>
+    <a href="{{ url_for('home') }}">Strona Główna</a>
+    <a href="{{ url_for('home') }}#o-nas">O nas</a>
+    <a href="{{ url_for('home') }}#oferta">Oferta</a>
+    <a href="{{ url_for('contact') }}">Kontakt</a>
+    <a href="{{ url_for('projects') }}">Nasze Projekty</a>
 </nav>
+
 
 
 <main>
     {% block content %}{% endblock %}
 </main>
 
-<footer>
-  <!-- Paste your footer here -->
+
+<footer id="colophon" class="site-footer">
+    <ul>
+        <li>
+            <div itemscope itemtype="https://schema.org/LocalBusiness">
+                <div itemprop="name">NBS - New Build Story. Remonty i wykończenia</div>
+                <div class="footer-email-item">
+                    <img src="{{ url_for('static', filename='images/image_icon.jpg') }}" 
+                         alt="Email Icon" class="footer-icon-email">
+                    <span itemprop="email">
+                        <a href="mailto:nbsnewbuildstory@gmail.com">nbsnewbuildstory@gmail.com</a>
+                    </span>
+                </div>
+                <div>Telefon:
+                    <span itemprop="telephone">510 731 565</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/profile.php?id=61574058546877"
+               target="_blank" rel="nofollow">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
+                     alt="Facebook" width="48" height="48">
+            </a>
+        </li>
+        <li>
+            <p>Copyright © 2025 NBS New Build Story</p>
+        </li>
+        <li>
+            <p>Created by bartbox</p>
+        </li>
+    </ul>
 </footer>
 
 </body>
